@@ -1,0 +1,564 @@
+/*----------------------------------------------------------
+RESET Y VARIABLES
+----------------------------------------------------------*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color-casi-blanco: #f0f5f3;
+    --color-oscuro: #4FAB94;
+    --color-intermedio: #7ACBB7;
+    --color-gris-oscuro: rgb(34, 34, 34);
+    --color-rojo: #c97b7b;
+    --color-rojo-osc: #b55e5e;
+
+}
+
+html{
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-gris-oscuro);
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*----------------------------------------------------------
+INICIO: HEADER (NAVBAR Y HERO)
+----------------------------------------------------------*/
+header{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../assets/img/inicio/fondo-hero_inicio.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 2vh 4vh;
+
+    color: black;
+    font-weight: bold;
+    backdrop-filter: blur(8px);
+}
+
+.logo img{
+    display: block;
+    height: clamp(15px, 2vw, 35px);
+    width: auto;
+}
+
+
+.nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    gap: 2vw;
+    
+}
+
+.nav-links a{
+    border-bottom: 2px solid transparent;
+    font-size: clamp(0.6rem, 2vw, 1rem);
+    line-height: 1.1;
+    transition: border-bottom-color 0.5s ease;
+}
+
+.nav-links a:hover{
+    border-bottom-color: black;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 16px;
+    min-height: 80vh;
+    width: 100%;
+}
+
+.hero h1 {
+    font-weight: bold;
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+    color: black;
+}
+
+.hero .subtitulo {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    white-space: normal;
+    overflow-wrap: break-word;
+    color: black;
+}
+/*----------------------------------------------------------
+INICIO: SECCIÓN 1 (SOBRE NOSOTROS)
+----------------------------------------------------------*/
+h2{
+    display: flex;
+    justify-content: center;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    font-weight: bold;
+    margin: 3vw 0 0 2vh;
+}
+
+.sobre_nosotros_01 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    overflow: hidden;
+    align-items: center;
+    justify-items: center;
+    gap: 4vw;
+    margin: 4vh;
+}
+
+.sobre_nosotros_01 img {
+    display: block;
+    height: 90vh;
+    min-height: 500px;
+    grid-column: auto;
+}
+
+.texto_sobre_nosotros {
+    text-align: center;
+    grid-column: auto;
+}
+
+.texto_sobre_nosotros h3{
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.texto_sobre_nosotros p{
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    text-align: justify;
+    margin-bottom: 2vw;
+}
+/*----------------------------------------------------------
+FOOTER (PARA TODOS IGUAL)
+----------------------------------------------------------*/
+footer{
+    background-color: var(--color-gris-oscuro);
+    color: grey;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 2vh 4vh;
+}
+
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+}
+
+.redes a{
+    transition: transform 0.25s ease;
+}
+
+.redes a:hover{
+    transform: scale(1.05);
+}
+/*----------------------------------------------------------
+BOTON ARRIBA (TODOS IGUAL)
+----------------------------------------------------------*/
+.btn-arriba {
+    position: fixed;
+    bottom: clamp(4rem, 25vh, 7rem);
+    right: clamp(1rem, 5vh, 2rem);
+    z-index: 999;
+    width: clamp(30px, 7vh, 50px);
+    height: clamp(30px, 7vh, 50px);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    background-color: rgba(34, 34, 34, 0.5);
+    color: white;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgba(34, 34, 34, 0.2);
+    backdrop-filter: blur(8px);
+
+    transition: background-color 0.25s ease,
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+
+.btn-arriba:hover {
+    background-color: var(--color-gris-oscuro);
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(34, 34, 34, 0.4);
+}
+
+
+
+/*----------------------------------------------------------
+GALERÍA: HEADER
+----------------------------------------------------------*/
+#galeria{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../assets/img/galeria/img-fondo-hero-galderia.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 2vh 4vh;
+
+    color: black;
+    font-weight: bold;
+    backdrop-filter: blur(8px);
+}
+
+.logo img{
+    display: block;
+    height: clamp(15px, 2vw, 35px);
+    width: auto;
+}
+
+
+.nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    gap: 2vw;
+    
+}
+
+.nav-links a{
+    border-bottom: 2px solid transparent;
+    font-size: clamp(0.6rem, 2vw, 1rem);
+    line-height: 1.1;
+    transition: border-bottom-color 0.5s ease;
+}
+
+.nav-links a:hover{
+    border-bottom-color: black;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4vh;
+    min-height: 80vh;
+    width: 100%;
+}
+
+.hero h1 {
+    font-weight: bold;
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.hero .subtitulo {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+/*---------------------------------------------------------
+GALERÍA: MAIN
+----------------------------------------------------------*/
+.contenido-galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 4vh;
+    gap: 2vw;
+}
+
+.div-item{
+    margin-bottom: 4vh;
+    transition: scale 0.25s ease, box-shadow 0.25s ease;
+    padding: 2vw;
+}
+
+.div-item:hover {
+    scale: 1.05;
+    box-shadow: 0 4px 16px rgba(34, 34, 34, 0.4);
+}
+
+.div-item img{
+    width: 100%;
+    height: auto;
+}
+
+.categoria {
+    color: rgba(34, 34, 34, 0.5);
+    font-size: clamp(0.8rem, 3vh, 1.3rem);
+    font-weight: bold;
+}
+
+h3 {
+    line-height: 1;
+    font-size: clamp(1rem, 3.5vh, 1.5rem);
+}
+
+
+/*----------------------------------------------------------
+PRESUPUESTO: HEADER
+----------------------------------------------------------*/
+#presupuesto{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../assets/img/presupuesto/img-fondo-hero-presupuesto.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+/*----------------------------------------------------------
+PRESUPUESTO: FORMULARIO
+----------------------------------------------------------*/
+.presupuesto-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    margin: 4vh;
+    padding: 4vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(34, 34, 34, 0.4);
+    width: clamp(300px, 50vw, 500px);
+}
+
+fieldset{
+    border: 1px var(--color-gris-oscuro);
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(34, 34, 34, 0.2);
+    padding: 2vh;
+    margin-bottom: 2vh;
+}
+
+legend {
+    background-color: whitesmoke;
+    border: 1px var(--color-gris-oscuro);
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(34, 34, 34, 0.2);
+    padding: 1vh;
+    
+    font-weight: bold;
+    font-size: clamp(0.8rem, 2.5vh, 1.2rem);
+}
+
+label{
+    line-height: 1;
+}
+
+.campo input, .campo label, .campo textarea{
+    display: block;          
+    width: 100%;             
+    padding: 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: clamp(1rem, 1vh, 1.2rem);
+    transition: border 0.3s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+    border: 2px solid var(--color-oscuro);
+    box-shadow: 0 0 8px rgba(34, 34, 34, 0.2);
+    transform: scale(1.02);
+    background-color: var(--color-casi-blanco);
+}
+
+.campo input:hover,
+.campo textarea:hover {
+    border-color: var(--color-intermedio);
+}
+
+.campo {
+    display: block;
+}
+
+.terminos-condiciones{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+
+.terminos-condiciones input{
+    border: 1px solid var(--color-gris-oscuro);
+    margin-bottom: 2vh;
+}
+
+.terminos-condiciones input:focus{
+    outline: none;
+    border: 2px solid var(--color-oscuro);
+    box-shadow: 0 0 8px rgba(34, 34, 34, 0.2);
+    transform: scale(1.02);
+    background-color: var(--color-casi-blanco);
+}
+
+.terminos-condiciones input:hover {
+    border-color: var(--color-intermedio);
+}
+
+.botones{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button{
+    border-radius: 4px;
+    border: none;
+
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    width: auto;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.boton-enviar{
+    background-color: var(--color-intermedio);
+    color: var(--color-gris-oscuro);
+}
+
+.boton-reset{
+    background-color: var(--color-rojo);
+    color: var(--color-gris-oscuro);
+}
+
+button:hover{
+    box-shadow: 0 0 8px rgba(34, 34, 34, 0.4);
+    transform: scale(1.05);
+}
+
+.boton-enviar:focus{
+    background-image: linear-gradient(to top, rgba(49, 146, 122, 0.4), transparent);
+}
+
+.boton-reset:focus{
+    background-image: linear-gradient(to top, rgba(181, 94, 94, 0.4), transparent);
+}
+
+
+
+/*----------------------------------------------------------
+CONTACTO: HEADER
+----------------------------------------------------------*/
+#contacto{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../assets/img/contacto/img-fondo-hero-galderia.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+/*----------------------------------------------------------
+CONTACTO: MAIN
+----------------------------------------------------------*/
+.datos-contacto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    overflow: hidden;
+    align-items: center;
+    justify-items: center;
+    gap: 4vw;
+    margin: 4vh;
+}
+
+.datos-contacto img {
+    display: block;
+    height: 90vh;
+    min-height: 500px;
+    grid-column: auto;
+}
+
+.texto_datos-contacto {
+    grid-column: auto;
+}
+
+.texto_datos-contacto h3{
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.texto_datos-contacto p{
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    text-align: justify;
+}

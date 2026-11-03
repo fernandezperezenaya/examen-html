@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cuestionario para comenzar a colaborar.">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Tejedora Rural | Presupuesto</title>
+</head>
+<body>
+    <header id="presupuesto">
+        <div class="navbar">
+            <div class="logo"><a href="../index.html" aria-label="Tejedora Rural, ir al inicio"><img src="../assets/img/logo.svg" alt="Logo Tejedora Rural"></a></div>
+            <nav aria-label="Menú Navegación">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="#presupuesto" aria-current="page">Presupuesto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section class="hero">
+            <h1>Del pensamiento a tu armario</h1>
+            <p class="subtitulo">Convertimos todas tus ideas en realidad</p>
+        </section>
+    </header>
+
+    <main>
+        <section class="presupuesto-form">
+            <h2>Explícanos tus ideas</h2>
+            <form>
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required pattern="[A-Za-zÁáÉéÍíÓóÚúÑñ\s]{2,20}" title="Solo letras y espacios minimo 2 caracteres, máximo 20 caracteres" placeholder="María José">
+                    </div>
+                    <div class="campo">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" required pattern="[A-Za-zÁáÉéÍíÓóÚúÑñ\s]{2,40}" title="Solo letras y espacios minimo 2 caracteres, máximo 40 caracteres" placeholder="Fernández Fernández">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Contacto</legend>
+                    <div class="campo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" required pattern="{9}" title="Solo números, 9 caracteres" placeholder="612345678">
+                    </div>
+                    <div class="campo">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="nombre@correo.es">
+                    </div>
+                    <div class="campo">
+                        <label for="mas-info">Más Información</label>
+                        <textarea id="mas-info" name="mas-info" minlength="10" maxlength="100" title="Este campo debe tener entre 10 y 100 caracteres" placeholder="¿Algo que debamos saber?" ></textarea>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Propuesta</legend>
+                    <div class="campo">
+                        <label for="idea">Tú idea</label>
+                        <textarea id="idea" name="idea" rows="5" required minlength="10" maxlength="100" title="Idea debe tener entre 10 y 100 caracteres" placeholder="Escribe tu idea aquí..." ></textarea>
+                    </div>
+                </fieldset>
+                <div class="terminos-condiciones">
+                    <input type="checkbox" name="terminos" id="terminos" required>
+                    <label for="terminos">Acepto los términos y condiciones</label>
+                </div>
+                <div class="botones">
+                    <button type="submit" class="boton-enviar">Enviar</button>
+                    <button type="reset" class="boton-reset">Borrar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="redes">
+            <a href="https://www.instagram.com/enayane_tejedorarural/" aria-label="Página de Instagram"><img src="../assets/iconos/instagram.png" alt="icono Instagram" width="32" height="32"></a>
+            <a href="https://www.facebook.com/?locale=es_ES" aria-label="Página de Facebook"><img src="../assets/iconos/facebook.png" alt="icono Facebook" width="32" height="32"></a>
+            <a href="https://www.tiktok.com/es/" aria-label="Página de TikTok"><img src="../assets/iconos/tiktok.png" alt="icono Tiktok" width="32" height="32"></a>
+        </div>
+        <div class="copiright">
+            <p class="copirighyt">© Tejedora Rural. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

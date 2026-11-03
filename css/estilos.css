@@ -163,6 +163,7 @@ h2{
     height: 90vh;
     min-height: 500px;
     grid-column: auto;
+    object-fit: contain;
 }
 
 .texto_sobre_nosotros {
@@ -545,6 +546,7 @@ CONTACTO: MAIN
     height: 90vh;
     min-height: 500px;
     grid-column: auto;
+    object-fit: contain;
 }
 
 .texto_datos-contacto {
